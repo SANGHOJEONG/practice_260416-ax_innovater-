@@ -15,10 +15,10 @@ st.set_page_config(
 def load_data():
     try:
         # 파일명을 'dummy_data.xlsx - Sheet1.csv'로 하거나 업로드된 이름에 맞게 수정 가능
-        df = pd.read_csv('dummy_data.xlsx - Sheet1.csv')
+        df = pd.read_csv('dummy_data.csv')
         return df
     except FileNotFoundError:
-        st.error("데이터 파일(dummy_data.xlsx - Sheet1.csv)을 찾을 수 없습니다.")
+        st.error("데이터 파일(dummy_data.csv)을 찾을 수 없습니다.")
         return pd.DataFrame()
 
 df_master = load_data()
